@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*deixando as boxes visiveis*/
+:root {
+  border: 1px solid green;
+}
+
+body {
+  border: 1px solid red;
+  margin: 3px;
+}
+
+div {
+  border: 1px solid red;
+}
+
+img {
+  border: 1px solid red;
+}
+
+p {
+  border: 1px solid red;
+}
+
+button {
+  border: 1px solid red;
+}
+
+span {
+  border: 1px solid red;
+}
+
+ul {
+  border: 1px solid red;
+}
+
+li {
+  border: 1px solid red;
+}
+
+a {
+  border: 1px solid red;
+}
+
+ion-icon {
+  border: 1px solid red;
+}
+
+footer {
+  border: 1px solid red;
+}
+/**/
+
+/*variáveis de cores do DarktMode*/
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-hover-color: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-br-url: url(./assets/assets/moon-stars.svg);
+}
+
+/*variáveis de cores do LightMode*/
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-hover-color: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-br-url: url(./assets/assets/sun.svg);
+}
+
+/*Definfindo as fontes*/
+:root {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  /*
+  background-image: url(./assets/assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*background: color image position/size */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* profile */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* switch-botão */
+
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-br-url) no-repeat center;
+  /*border: 0;*/
+  border-radius: 50%;
+
+  /*Alinhamento e Posiconamento com position: absolute*/
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  /*border: 1px solid var(--stroke-color);*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* links */
+
+ul {
+  /*basicamente tira as bolinhas*/
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /*adiciona um espaço entre os elementos ou atributos*/
+  gap: 16px;
+
+  padding: 24px 0;
+}
+
+ul li a {
+  /*cria uma linha no meio do elemento (main ou eixo principal)*/
+  display: flex;
+  /*centraliza os itens no eixo horizontal*/
+  align-items: center;
+  /*centraliza os inten no eixo vertical*/
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: var(--stroke-color);
+  /*arredonda as bordas*/
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  /*Para funcionar em alguns navegadores não compatíveis*/
+  -webkit-backdrop-filter: blur(4px);
+
+  /*remove a linha que está embaixo do elemento*/
+  text-decoration: none;
+  font-weight: 500;
+
+  /*adiciona uma transição de um ou mais atributos*/
+  transition: background 0.2s;
+}
+
+/*pseudo-selector -> faz uma alteração quando o mouse passar por cima*/
+ul li a:hover {
+  background: var(--surface-hover-color);
+  border: 1.5px solid var(--text-color);
+}
+
+/*social links*/
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
