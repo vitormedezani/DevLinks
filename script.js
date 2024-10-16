@@ -14,13 +14,13 @@ function toggleMode() {
   //substituir a imagem
   if (html.classList.contains("light")) {
     // se tiver light mode, adicionar a imagem light e a descrição
-    img.setAttribute("src", "./assets/assets/avatar-light.png")
+    img.setAttribute("src", "./assets/avatar-light.png")
     // descrição
-    img.setAttribute("alt", "Foto do Myke Brito, de óculos de sol e fundo azul")
+    img.setAttribute("alt", "Foto do Vitor Ayala, de camisa preta e óculos de grau com fundo branco")
   } else {
     // se tiver sem light mode, manter a imagem e a descrição normais
-    img.setAttribute("src", "./assets/assets/avatar.png")
+    img.setAttribute("src", "./assets/avatar.png")
     // descrição
-    img.setAttribute("alt", "Foto do Myke Brito, de óculos de grau e fundo amarelo")
+    img.setAttribute("alt", "Foto do Vitor Ayala, de camisa branca e óculos de grau")
   }
 }
